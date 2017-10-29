@@ -2,7 +2,7 @@
   student = Student.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    email: "#{Faker::Color.color_name}.#{Faker::Beer.hop.downcase.strip}@gmail.com",
+    email: "#{Faker::Color.color_name}.#{Faker::Beer.hop.downcase.delete(' ')}@gmail.com",
     phone_number: Faker::PhoneNumber.phone_number,
     bio: Faker::Company.bs,
     photo: Faker::LoremPixel.image
