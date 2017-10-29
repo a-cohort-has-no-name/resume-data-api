@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  capstone_name: MyString
+  description: MyText
+  capstone_url: MyString
+  screenshot: MyString
+  student_id: 1
+
+two:
+  capstone_name: MyString
+  description: MyText
+  capstone_url: MyString
+  screenshot: MyString
+  student_id: 1
