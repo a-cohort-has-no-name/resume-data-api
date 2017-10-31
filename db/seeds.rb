@@ -1,23 +1,3 @@
-x = 1
-30.times do 
-    Skill.create(
-        skill_name: Faker::Job.key_skill,
-        student_id: x)  
-    x = x + 1  
-end
-
-y=1
-30.times do 
-    count = 1
-    Capstone.create(
-        capstone_name: Faker::Company.name,
-        description: Faker::Lorem.paragraph,
-        capstone_url: Faker::Company.name.gsub(/[\s,]/ ,"") + ".com",
-        screenshot: Faker::LoremPixel.image,
-        student_id: y)
-    y = y + 1
-end
- 
 30.times do 
   student = Student.new(
     first_name: Faker::Name.first_name,
@@ -38,6 +18,26 @@ end
   student.save
 end
 
+x = 1
+30.times do 
+    Skill.create(
+        skill_name: Faker::Job.key_skill,
+        student_id: x)  
+    x = x + 1  
+end
+
+y=1
+30.times do 
+    count = 1
+    Capstone.create(
+        capstone_name: Faker::Company.name,
+        description: Faker::Lorem.paragraph,
+        capstone_url: Faker::Company.name.gsub(/[\s,]/ ,"") + ".com",
+        screenshot: Faker::LoremPixel.image,
+        student_id: y)
+    y = y + 1
+end
+ 
 a = 1
 30.times do
   Experience.create(
@@ -45,7 +45,8 @@ a = 1
     end_date: Faker::Date.between(30.days.ago, Date.today),
     job_title: Faker::Job.title,
     company_name: Faker::Company.name,
-    details: Faker::Job.key_skill)
+    details: Faker::Job.key_skill,
+    student_id: a)
   a = a + 1
 end
 
@@ -56,6 +57,7 @@ b = 1
     end_date: Faker::Date.between(5.years.ago, 30.days.ago),
     degree: Faker::Educator.course,
     university_name: Faker::Educator.university,
-    details: Faker::Lorem.sentences)
+    details: Faker::Lorem.sentences,
+    student_id: b)
   b = b + 1
 end
