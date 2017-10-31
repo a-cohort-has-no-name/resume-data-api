@@ -19,7 +19,7 @@
 end
 
 x = 1
-60.times do 
+30.times do 
     Skill.create(
         skill_name: Faker::Job.key_skill,
         student_id: x)  
@@ -38,8 +38,6 @@ y=1
     y = y + 1
 end
  
-
-
 a = 1
 30.times do
   Experience.create(
@@ -49,9 +47,6 @@ a = 1
     company_name: Faker::Company.name,
     details: Faker::Job.key_skill,
     student_id: a)
-
-
-
   a = a + 1
 end
 
@@ -64,6 +59,5 @@ b = 1
     university_name: Faker::Educator.university,
     details: Faker::Lorem.sentences,
     student_id: b)
-
   b = b + 1
 end
