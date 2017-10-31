@@ -16,7 +16,8 @@ y=1
         screenshot: Faker::LoremPixel.image,
         student_id: y)
     y = y + 1
-
+end
+ 
 30.times do 
   student = Student.new(
     first_name: Faker::Name.first_name,
