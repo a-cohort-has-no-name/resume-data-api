@@ -1,4 +1,5 @@
 class EducationsController < ApplicationController
+
     def index
         @educations = Education.all
         render "index.json.jbuilder"
@@ -43,4 +44,5 @@ class EducationsController < ApplicationController
         @education.destroy
         render json: { message: 'succesfully destoryed' }
     end
+
 end
