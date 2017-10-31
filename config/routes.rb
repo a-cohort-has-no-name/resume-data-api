@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
 get "/capstone" => "capstones#index"
 post "/capstone" => "capstones#create"
 get "/capstone/:id" => "capstones#show"
