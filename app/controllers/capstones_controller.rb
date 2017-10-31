@@ -1,2 +1,3 @@
 class CapstonesController < ApplicationController
+    
 end

@@ -5,7 +5,7 @@
     email: "#{Faker::Color.color_name}.#{Faker::Beer.hop.downcase.delete(' ')}@gmail.com",
     phone_number: Faker::PhoneNumber.phone_number,
     bio: Faker::Company.bs,
-    photo: Faker::LoremPixel.image
+    photo: Faker::LoremPixel.image)
     )
 
   student.update(
@@ -14,7 +14,8 @@
     personal_website: "#{student.first_name.downcase}#{Faker::Ancient.god.downcase}.com")
   student.update(
      resume_url: "#{student.personal_website}/resume",
-     github_url: "github.com/#{student.twitter_handle}")
+     github_url: "github.com/#{student.twitter_handle}",
+     password: BCrypt::Password.create(student.id))
   student.save
 end
 
