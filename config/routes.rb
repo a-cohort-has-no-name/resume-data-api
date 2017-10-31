@@ -34,4 +34,5 @@ get "/student/:id" => "students#show"
 get "/student/:id/edit" => "students #edit"
 patch "/student/:id" => "students#update"
 delete "/student/:id" => "students#destroy"
+
 end
