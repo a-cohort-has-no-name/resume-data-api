@@ -8,6 +8,5 @@ class ApplicationController < ActionController::Base
       head(403)
     end
   end
-end
   #helper_method :aunthenticate_user
 end
