@@ -7,5 +7,6 @@ class ApplicationController < ActionController::Base
       return true
     else false
   end
+end
   #helper_method :aunthenticate_user
 end
