@@ -4,9 +4,8 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     @current_user = Student.find_by(email: params[:email])
     if @current_user && @current_user.password_digest.is_password?(params[:password])
-      return true
     else 
-      return false
+      head(403)
     end
   end
   #helper_method :aunthenticate_user
