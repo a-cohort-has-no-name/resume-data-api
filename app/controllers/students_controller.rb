@@ -24,8 +24,7 @@ class StudentsController < ApplicationController
     personal_website: params[:personal_website],
     resume_url: params[:resume_url],
     github_url: params[:github_url],
-    password: params[:password],
-    password_confirmation)
+    password: params[:password])
     render 'show.json.jbuilder'
   end
 
