@@ -17,7 +17,7 @@
   student.update(
      resume_url: "#{student.personal_website}/resume",
      github_url: "github.com/#{student.twitter_handle}",
-     password: student.id
+     password: student.first_name)
   student.save
 end
 
