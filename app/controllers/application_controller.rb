@@ -5,7 +5,9 @@ class ApplicationController < ActionController::Base
     @current_user ||= Student.first(email: params[:email])
     if @current_user && @current_user.password_digest.is_password?(params[:password])
       return true
-    else false
+    else 
+      return false
+    end
   end
   #helper_method :aunthenticate_user
 end
