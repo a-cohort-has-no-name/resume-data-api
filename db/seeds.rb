@@ -17,7 +17,7 @@
   student.update(
      resume_url: "#{student.personal_website}/resume",
      github_url: "github.com/#{student.twitter_handle}",
-     password: BCrypt::Password.create(student.id))
+     password: student.id
   student.save
 end
 
