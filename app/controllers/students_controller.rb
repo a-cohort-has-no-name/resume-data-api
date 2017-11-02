@@ -4,11 +4,19 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.all
+    @skills = Skill.all
+    @experiences = Experience.all
+    @capstones = Capstone.all
+    @education = Education.all
     render 'index.json.jbuilder'
   end
 
   def show
     @student = Student.find_by(id: params[:id])
+    @skills = Skill.all.select {|skill| skill["student_id"] == @student.id}
+    @experiences = Experience.all.select {|experience| experience["student_id"] == @student.id}
+    @capstones = Capstone.all.select {|capstone| capstone["student_id"] == @student.id}
+    @education = Education.all.select {|education| education["student_id"] == @student.id}
     render 'show.json.jbuilder'
   end
 
