@@ -1,5 +1,3 @@
-
-
 json.array! @students.each do |student|
   skills = @skills.select {|skill| skill["student_id"] == student.id }
   experiences = @experiences.select {|experience| experience["student_id"] == student.id}
