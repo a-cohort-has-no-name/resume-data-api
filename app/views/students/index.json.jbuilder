@@ -9,7 +9,6 @@ json.array! @students.each do |student|
   json.experiences experiences
   json.education education
   json.capstones capstones
-  
 end
 
 

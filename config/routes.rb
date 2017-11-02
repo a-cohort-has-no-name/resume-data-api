@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :capstones, :capstones, :experiences, :skills, :students, except: [:new, :edit]
+  resources :capstones, :experiences, :skills, :students, :educations, except: [:new, :edit]
 
 end
