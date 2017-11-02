@@ -3,3 +3,6 @@ json.skills @skills
 json.experiences @experiences
 json.education @education
 json.capstones @capstones
+
+
+    
