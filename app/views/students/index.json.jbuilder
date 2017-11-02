@@ -1,9 +1,4 @@
-# json.array! @students.each do |student|
-#   json.partial! 'student.json.jbuilder', student: student
-# end
 
-# json.skill_name student.skills.skill_name
-# json.student_id student.skills.student_id
 
 json.array! @students.each do |student|
     json.id student.id
@@ -56,8 +51,3 @@ end
 
 
 
-# json.capstone_name student.capstones.capstone_name
-# json.description student.capstones.description
-# json.capstone_url student.capstones.capstone_url
-# json.screenshot student.capstones.screenshot
-# json.student_id student.capstones.student_id
