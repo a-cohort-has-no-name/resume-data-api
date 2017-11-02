@@ -21,6 +21,11 @@
   student.save
 end
 
+# DUMMY STUDENT FOR LOGIN PURPOSES
+student = Student.create(
+    email: "1",
+    password: "abc") 
+
 x = 1
 30.times do 
     Skill.create(
