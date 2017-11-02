@@ -22,9 +22,9 @@
 end
 
 # DUMMY STUDENT FOR LOGIN PURPOSES
-student = Student.new(
+student = Student.create(
     email: "1",
-    password: "1") 
+    password: "abc") 
 
 x = 1
 30.times do 
